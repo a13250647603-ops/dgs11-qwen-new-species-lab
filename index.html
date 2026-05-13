@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>千问新物种实验室</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app" data-screen="intro">
+    <header class="topbar" aria-label="作品信息">
+      <div class="brand-mark" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div>
+        <p class="eyebrow">阿里云千问大模型命题 · H5 MVP</p>
+        <h1>千问新物种实验室</h1>
+      </div>
+      <div class="step-meter" aria-live="polite">
+        <strong id="stepNow">01</strong>
+        <span>/ 07</span>
+      </div>
+    </header>
+
+    <section class="screen active" data-id="intro" aria-labelledby="introTitle">
+      <div class="stage-grid">
+        <div class="hero-copy">
+          <p class="kicker">把普通工具放进实验室</p>
+          <h2 id="introTitle">让任务进化成智能伙伴</h2>
+          <p class="lead">输入一个目标，千问将它拆成理解、规划、执行与检查四个模块，生成属于你的AI新物种。</p>
+          <button class="primary" data-next="choose">
+            <span aria-hidden="true">↗</span>
+            开始进化
+          </button>
+        </div>
+        <div class="lab-orbit" aria-label="实验室视觉">
+          <div class="core">Q</div>
+          <i class="node n1"></i>
+          <i class="node n2"></i>
+          <i class="node n3"></i>
+          <i class="node n4"></i>
+          <svg viewBox="0 0 260 260" role="img" aria-label="任务回路">
+            <path d="M130 22 C190 36 226 74 235 129 C223 188 188 226 128 237 C70 226 34 190 23 131 C34 72 72 35 130 22Z"></path>
+            <path d="M72 88 C106 48 154 48 188 88 C216 123 208 173 168 194 C126 219 76 199 60 154"></path>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" data-id="choose" aria-labelledby="chooseTitle">
+      <div class="section-head">
+        <p class="kicker">选择实验材料</p>
+        <h2 id="chooseTitle">普通工具会长出新的能力</h2>
+      </div>
+      <div class="tool-grid" role="listbox" aria-label="工具选择">
+        <button class="tool selected" data-tool="笔记" data-species="洞察记录体">
+          <span>✎</span>
+          <strong>笔记</strong>
+          <em>会整理、追问、复盘</em>
+        </button>
+        <button class="tool" data-tool="日程" data-species="时间协作体">
+          <span>◷</span>
+          <strong>日程</strong>
+          <em>会拆解、提醒、调整</em>
+        </button>
+        <button class="tool" data-tool="PPT" data-species="表达生成体">
+          <span>▤</span>
+          <strong>PPT</strong>
+          <em>会组织、排版、讲述</em>
+        </button>
+        <button class="tool" data-tool="代码" data-species="执行构建体">
+          <span>{ }</span>
+          <strong>代码</strong>
+          <em>会生成、检查、迭代</em>
+        </button>
+        <button class="tool" data-tool="海报" data-species="视觉创作体">
+          <span>▣</span>
+          <strong>海报</strong>
+          <em>会构图、延展、输出</em>
+        </button>
+      </div>
+      <nav class="controls">
+        <button class="secondary" data-back="intro">返回</button>
+        <button class="primary" data-next="input">下一步</button>
+      </nav>
+    </section>
+
+    <section class="screen" data-id="input" aria-labelledby="inputTitle">
+      <div class="section-head">
+        <p class="kicker">输入进化目标</p>
+        <h2 id="inputTitle">一句话，让工具理解你要完成什么</h2>
+      </div>
+      <div class="prompt-panel">
+        <label for="missionInput">我的目标</label>
+        <textarea id="missionInput" maxlength="80">帮我把毕业作品发布计划拆成今天能执行的任务</textarea>
+        <div class="chips" aria-label="目标样例">
+          <button data-sample="帮我把社团招新内容变成三天发布计划">招新计划</button>
+          <button data-sample="帮我把调研资料整理成一页汇报结构">资料汇报</button>
+          <button data-sample="帮我把广告创意拆成可执行分工">创意执行</button>
+        </div>
+      </div>
+      <nav class="controls">
+        <button class="secondary" data-back="choose">返回</button>
+        <button class="primary" data-next="evolve">开始生成</button>
+      </nav>
+    </section>
+
+    <section class="screen" data-id="evolve" aria-labelledby="evolveTitle">
+      <div class="section-head">
+        <p class="kicker">千问进化中</p>
+        <h2 id="evolveTitle">一个目标，被拆成四个可执行模块</h2>
+      </div>
+      <div class="evolve-chain">
+        <article>
+          <span>01</span>
+          <h3>理解</h3>
+          <p>识别目标、场景与交付物。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>规划</h3>
+          <p>拆出步骤、顺序与依赖。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>执行</h3>
+          <p>生成内容、结构与行动卡。</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>检查</h3>
+          <p>标出风险、缺口与下一步。</p>
+        </article>
+      </div>
+      <div class="scanline" aria-hidden="true"></div>
+      <nav class="controls">
+        <button class="secondary" data-back="input">返回</button>
+        <button class="primary" data-next="result">查看新物种</button>
+      </nav>
+    </section>
+
+    <section class="screen" data-id="result" aria-labelledby="resultTitle">
+      <div class="section-head">
+        <p class="kicker">进化完成</p>
+        <h2 id="resultTitle"><span id="speciesName">洞察记录体</span> 已生成</h2>
+      </div>
+      <div class="result-layout">
+        <div class="creature" aria-label="新物种形象">
+          <div class="creature-head"></div>
+          <div class="creature-body">
+            <i></i><i></i><i></i>
+          </div>
+        </div>
+        <div class="ability-list">
+          <article>
+            <strong>目标翻译</strong>
+            <p id="missionSummary">把模糊目标转成清晰交付物。</p>
+          </article>
+          <article>
+            <strong>任务拆解</strong>
+            <p>自动生成今日、明日、本周三层行动卡。</p>
+          </article>
+          <article>
+            <strong>质量检查</strong>
+            <p>每次输出都附带风险、缺口和验证动作。</p>
+          </article>
+        </div>
+      </div>
+      <nav class="controls">
+        <button class="secondary" data-back="evolve">返回</button>
+        <button class="primary" data-next="share">生成分享卡</button>
+      </nav>
+    </section>
+
+    <section class="screen" data-id="share" aria-labelledby="shareTitle">
+      <div class="section-head">
+        <p class="kicker">我的AI新物种</p>
+        <h2 id="shareTitle">把进化结果带走</h2>
+      </div>
+      <div class="share-card">
+        <div>
+          <p>我把 <strong id="shareTool">笔记</strong> 放进千问实验室</p>
+          <h3 id="shareSpecies">洞察记录体</h3>
+          <span id="shareMission">帮我把毕业作品发布计划拆成今天能执行的任务</span>
+        </div>
+        <div class="qr" aria-label="二维码占位">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+      <nav class="controls">
+        <button class="secondary" data-back="result">返回</button>
+        <button class="primary" data-next="brand">完成实验</button>
+      </nav>
+    </section>
+
+    <section class="screen" data-id="brand" aria-labelledby="brandTitle">
+      <div class="brand-finale">
+        <p class="kicker">从工具到伙伴</p>
+        <h2 id="brandTitle">千问大模型，让任务拥有新的操作系统入口</h2>
+        <p>理解需求、规划路径、执行任务、检查结果。普通工具进化之后，创意不再只停在想法里。</p>
+        <button class="primary" data-next="choose">
+          <span aria-hidden="true">↺</span>
+          再进化一次
+        </button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
