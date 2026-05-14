@@ -148,7 +148,7 @@ h3 {
 
 .screen.active {
   display: grid;
-  align-content: center;
+  align-content: start;
   animation: rise 0.28s ease-out;
 }
 
@@ -157,7 +157,7 @@ h3 {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 32px;
-  align-items: center;
+  align-items: start;
 }
 
 .hero-copy {
