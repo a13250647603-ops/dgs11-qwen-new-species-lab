@@ -164,26 +164,33 @@ h3 {
   min-width: 0;
 }
 
-.lab-orbit {
-  min-height: 360px;
-  position: relative;
+.hero-visual {
+  margin: 0;
   display: grid;
-  place-items: center;
+  gap: 12px;
+  justify-items: center;
+  align-content: center;
+  min-height: 360px;
 }
 
-.lab-orbit svg {
-  width: min(86%, 360px);
-  height: auto;
-  fill: none;
-  stroke: var(--cyan);
-  stroke-width: 4;
-  stroke-linecap: round;
-  filter: drop-shadow(0 18px 34px rgba(19, 168, 181, 0.22));
+.hero-visual img {
+  width: min(100%, 430px);
+  height: min(64vh, 560px);
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #07111a;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.34);
 }
 
-.lab-orbit svg path:nth-child(2) {
-  stroke: var(--amber);
-  stroke-width: 3;
+.hero-visual figcaption {
+  max-width: 430px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+  text-align: center;
 }
 
 .core {
@@ -546,7 +553,7 @@ textarea:focus {
     justify-content: center;
   }
 
-  .lab-orbit,
+  .hero-visual,
   .creature {
     min-height: 280px;
   }

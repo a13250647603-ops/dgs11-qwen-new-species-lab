@@ -15,6 +15,7 @@ worktracks/11/source/h5_mvp/index.html
 ## 当前覆盖
 
 - 入口页
+- 首屏主视觉已接入 `assets/dgs11-image2-smart-task-lab.png`
 - 工具选择
 - 目标输入
 - 进化过程
